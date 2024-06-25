@@ -8,7 +8,11 @@
 import SwiftUI
 
 public struct GrayRectangle: View {
-    var maxWidth: CGFloat
+    public var maxWidth: CGFloat
+    
+    public init(maxWidth: CGFloat) {
+        self.maxWidth = maxWidth
+    }
     
     public var body: some View {
         Rectangle()
