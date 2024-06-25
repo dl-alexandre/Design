@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct SearchButtonStyle: ButtonStyle {
-    var color: Color
+    public var color: Color
     public func makeBody(configuration: Configuration) -> some View {
         GrayRectangle(maxWidth: 40)
             .overlay {

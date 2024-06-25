@@ -16,6 +16,4 @@ public struct SearchBarStyle: ViewModifier {
                     .foregroundColor(.primary)
             }
     }
-    
-    public init() {}
 }
