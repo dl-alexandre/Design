@@ -18,4 +18,8 @@ public struct SearchButtonStyle: ButtonStyle {
                     .shadow(color: configuration.isPressed ? .gray : color, radius: 0.5, x: 1, y: 1)
             }
     }
+    
+    public init(color: Color) {
+        self.color = color
+    }
 }
