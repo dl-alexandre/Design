@@ -8,7 +8,7 @@
 import Foundation
 
 public extension Array where Element: Codable {
-    public func jsonString() -> String? {
+    func jsonString() -> String? {
         guard let data = try? JSONEncoder().encode(self) else { return nil }
         return String(data: data, encoding: .utf8)
     }

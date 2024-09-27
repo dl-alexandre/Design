@@ -8,7 +8,7 @@
 import SwiftUI
 
 public extension View {
-    public func keyboardAdaptive() -> some View {
+    func keyboardAdaptive() -> some View {
         ModifiedContent(content: self, modifier: KeyboardAdaptive())
     }
     
