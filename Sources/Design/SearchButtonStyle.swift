@@ -19,6 +19,7 @@ public struct SearchButtonStyle: ButtonStyle {
             }
     }
     
+    @MainActor
     public init(color: Color) {
         self.color = color
     }
