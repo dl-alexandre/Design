@@ -36,14 +36,14 @@ public struct KeyboardAdaptive: ViewModifier {
 #else
 public struct KeyboardAdaptive: ViewModifier {
     @State private var keyboardHeight: CGFloat = 0
-    
+
     public func body(content: Content) -> some View {
         content
             .padding(.bottom, keyboardHeight)
             .onAppear(perform: subscribeToKeyboardEvents)
             .onDisappear(perform: unsubscribeFromKeyboardEvents)
     }
-    
+
     private func subscribeToKeyboardEvents() {
         NotificationCenter.default.addObserver(forName: NSWindow.didResizeNotification, object: nil, queue: .main) { _ in
             if let keyWindow = NSApp.keyWindow {
@@ -54,7 +54,7 @@ public struct KeyboardAdaptive: ViewModifier {
             }
         }
     }
-    
+
     private func unsubscribeFromKeyboardEvents() {
         NotificationCenter.default.removeObserver(self)
     }

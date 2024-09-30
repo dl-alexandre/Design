@@ -17,6 +17,5 @@ public struct SearchBarStyle: ViewModifier {
             }
     }
     
-    @MainActor
     public init() {}
 }
