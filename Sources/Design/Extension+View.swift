@@ -8,10 +8,6 @@
 import SwiftUI
 
 public extension View {
-    func keyboardAdaptive() -> some View {
-        ModifiedContent(content: self, modifier: KeyboardAdaptive())
-    }
-    
     #if os(macOS)
     func asNSImage() -> NSImage? {
         let hostingView = NSHostingView(rootView: self)
