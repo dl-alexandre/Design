@@ -11,7 +11,7 @@ import AppKit
 
 public class AppDelegate: NSObject, NSApplicationDelegate {
     private var aboutBoxWindowController: NSWindowController?
-    
+
     @MainActor public func showAboutPanel() {
         if aboutBoxWindowController == nil {
             let styleMask: NSWindow.StyleMask = [.closable, .miniaturizable, .titled]

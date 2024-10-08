@@ -23,7 +23,6 @@ public struct AboutView: View {
         }
         .frame(minWidth: 100, minHeight: 300)
     }
-    
     public init() {}
 }
 

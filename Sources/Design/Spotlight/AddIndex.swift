@@ -1,10 +1,9 @@
 //
 //  AddIndex.swift
 //  Design
+//  https://github.com/dl-alexandre/Design
+//  See LICENSE for license information.
 //
-//  Created by Dalton Alexandre on 10/5/24.
-//
-
 
 import CoreSpotlight
 
