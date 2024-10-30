@@ -7,7 +7,7 @@
 
 import CoreSpotlight
 
-public func addIndex(_ domainID: String, items: String...) {
+public func addIndex(_ domainID: String,_ items: String...) {
     let secureIndex = CSSearchableIndex(name: domainID, protectionClass: .complete)
 
     let searchableItems = items.map { item in
