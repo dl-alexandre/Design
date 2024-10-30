@@ -7,18 +7,20 @@
 
 import CoreSpotlight
 
-public func addIndex(_ item: String, _ domainID: String) {
-    let attributeSet = CSSearchableItemAttributeSet(contentType: UTType.text)
-    attributeSet.title = item
-
-    let indexedItem = CSSearchableItem(uniqueIdentifier: item, domainIdentifier: domainID, attributeSet: attributeSet)
+public func addIndex(_ domainID: String, items: String...) {
     let secureIndex = CSSearchableIndex(name: domainID, protectionClass: .complete)
 
-    secureIndex.indexSearchableItems([indexedItem]) { error in
+    let searchableItems = items.map { item in
+        let attributeSet = CSSearchableItemAttributeSet(contentType: UTType.text)
+        attributeSet.title = item
+        return CSSearchableItem(uniqueIdentifier: item, domainIdentifier: domainID, attributeSet: attributeSet)
+    }
+
+    secureIndex.indexSearchableItems(searchableItems) { error in
         if let error = error {
-            print("Error indexing item: \(error.localizedDescription)")
+            print("Error indexing items: \(error.localizedDescription)")
         } else {
-            print("\(item) indexed successfully.")
+            print("\(items.count) items indexed successfully.")
         }
     }
 }
