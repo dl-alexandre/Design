@@ -7,7 +7,7 @@
 
 import CoreSpotlight
 
-public func addIndex(_ domainID: String,_ items: Set<String>) {
+public func addIndex(_ domainID: String, _ items: Set<String>) {
     let secureIndex = CSSearchableIndex(name: domainID, protectionClass: .complete)
 
     let searchableItems = items.map { item in
@@ -20,7 +20,7 @@ public func addIndex(_ domainID: String,_ items: Set<String>) {
         if let error = error {
             print("Error indexing items: \(error.localizedDescription)")
         } else {
-            print("\(items.count) items indexed successfully.")
+            print("^[\(items.count) items](inflect: true) indexed successfully.")
         }
     }
 }
