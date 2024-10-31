@@ -21,7 +21,7 @@ public func addIndex(_ domainID: String, _ items: Set<String>) {
         if let error = error {
             print("Error indexing items: \(error.localizedDescription)")
         } else {
-            print(Text("^[\(items.count) items](inflect: true) indexed successfully."))
+            print("\(items.count) item\(items.count == 1 ? "" : "s") indexed successfully.")
         }
     }
 }

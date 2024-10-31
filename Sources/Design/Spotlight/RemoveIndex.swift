@@ -14,7 +14,7 @@ public func removeIndex(_ item: String, _ domainID: String) {
         if let error = error {
             print("Error indexing item: \(error.localizedDescription)")
         } else {
-            print("\(item) indexed successfully.")
+            print("\(item) unindexed successfully.")
         }
     }
 }
